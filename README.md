@@ -1,1 +1,0 @@
-# baktek.github.io
