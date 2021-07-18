@@ -1,0 +1,65 @@
+.pageTitle {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.questionsHint {
+    font-style: italic;
+}
+
+.questionsContainer {
+}
+
+.questionBlock {
+    margin: 25px;
+}
+
+.question {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.answer{
+    margin-left: 20px;
+}
+
+.questionBlockErrorMessage {
+    color: red;
+}
+
+.resultsContainer {
+    margin-top: 50px;
+}
+
+    .resultsContainer, .resultsContainer * {
+        text-align: center;
+    }
+
+.result {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.imageResultContainer {
+    text-align: center;
+}
+
+.imageResult {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.generalErrorMessage {
+    color: red;
+}
+
+.buttonsContainer {
+    margin-top: 20px;
+}
+
+.getResultsButton {
+}
+
+.resetButton {
+}
