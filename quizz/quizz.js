@@ -40,8 +40,9 @@ function IsTooManyAnswersForQuestion($checkbox) {
     return res;
 }
 
-function showResults(result) {
+function showResults(result, resultPercent) {
     $(".result").text(result.DisplayName);
+    $(".resultPercent").text("(" + resultPercent + "%)");
     $(".imageResult").attr("src", result.ImageUrl);
 
     $(".questionsContainer").hide();
@@ -81,6 +82,7 @@ function GetResults() {
         });
     });
 
+    var totalPoints = isEmpty(dict) ? 0 : Object.keys(dict).map(k => dict[k]).reduce(function (a, b) { return a + b });
     var resultKey = isEmpty(dict) ? undefined : Object.keys(dict).reduce(function (a, b) { return dict[a] > dict[b] ? a : b });
 
     if (!(resultKey in c_allCharacters)) {
@@ -88,6 +90,9 @@ function GetResults() {
         return;
     }
 
+    var resultPercent = 100;
+    if (totalPoints > 0)
+        resultPercent = Math.floor(100 * (dict[resultKey] / totalPoints));
     var result = c_allCharacters[resultKey];
-    showResults(result);
+    showResults(result, resultPercent);
 }
