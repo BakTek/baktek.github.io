@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Quiz : Totally Spies</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../quiz.js"></script>
+
+    <link href="../quiz.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        // Array of all possible results
+        var c_allCharacters = {
+            "sam": { DisplayName: "Sam", ImageUrl: "images/Sam.jpg" },
+            "clover": { DisplayName: "Clover", ImageUrl: "images/Clover.jpg" },
+            "alex": { DisplayName: "Alex", ImageUrl: "images/Alex.png" },
+            "jerry": { DisplayName: "Jerry", ImageUrl: "images/Jerry.png" },
+            "mandy": { DisplayName: "Mandy", ImageUrl: "images/Mandy.jpg" }
+        };
+    </script>
+</head>
+<body>
+
+    <div><a href="../">Retour au sommaire</a></div>
+
+    <div class="pageTitle">
+        Quel personnage des <i>Totally Spies</i> es-tu ?
+    </div>
+
+    <div class="questionsContainer">
+
+        <div class="questionsHint">
+
+        </div>
+
+        <div class='questionBlock'>
+            <div class='question'>Après une journée de travail, tu :</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='5' data-alex='' data-jerry='' data-mandy='3'>vas faire du shopping</input></div>
+            <div class='answer'><input type='checkbox' data-sam='5' data-clover='' data-alex='' data-jerry='4' data-mandy=''>travailles encore un peu</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='5' data-jerry='' data-mandy=''>vas t'entraîner</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='' data-mandy='3'>fais un tour dans ta voiture neuve</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>La bibliothèque c'est chouette parce que :</div>
+            <div class='answer'><input type='checkbox' data-sam='4' data-clover='' data-alex='2' data-jerry='' data-mandy=''>Il y a plein de livre</input></div>
+            <div class='answer'><input type='checkbox' data-sam='1' data-clover='5' data-alex='2' data-jerry='' data-mandy='5'>On peut draguer les garçons tranquillement</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='5' data-mandy=''>Il y a un système de woohping pré-installé</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quelle est ta couleur préférée ?</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='5' data-alex='' data-jerry='' data-mandy=''>Rouge</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='5' data-jerry='' data-mandy=''>Jaune</input></div>
+            <div class='answer'><input type='checkbox' data-sam='4' data-clover='' data-alex='' data-jerry='' data-mandy=''>Vert</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='4' data-mandy=''>Noir</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='' data-mandy='3'>Violet</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quel cours préfères-tu ?</div>
+            <div class='answer'><input type='checkbox' data-sam='5' data-clover='' data-alex='2' data-jerry='' data-mandy=''>Chimie</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='5' data-alex='1' data-jerry='' data-mandy='5'>Design et mode</input></div>
+            <div class='answer'><input type='checkbox' data-sam='4' data-clover='' data-alex='' data-jerry='5' data-mandy=''>Informatique</input></div>
+            <div class='answer'><input type='checkbox' data-sam='3' data-clover='2' data-alex='5' data-jerry='' data-mandy=''>Sport</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Ce dont tu as le plus peur :</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='4' data-alex='2' data-jerry='' data-mandy='5'>Ne pas avoir la dernière tenue à la mode</input></div>
+            <div class='answer'><input type='checkbox' data-sam='5' data-clover='3' data-alex='4' data-jerry='5' data-mandy=''>Être viré</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='3' data-alex='' data-jerry='' data-mandy='5'>Les araignées</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='4' data-mandy='5'>Se faire gronder par sa mère</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quel est ton animal préféré ?</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='5' data-jerry='1' data-mandy='2'>Chat</input></div>
+            <div class='answer'><input type='checkbox' data-sam='3' data-clover='4' data-alex='' data-jerry='' data-mandy=''>Chien</input></div>
+            <div class='answer'><input type='checkbox' data-sam='4' data-clover='' data-alex='' data-jerry='' data-mandy=''>Grenouille</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quel est ton mode de transport préféré ?</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='3' data-alex='' data-jerry='3' data-mandy=''>Avion</input></div>
+            <div class='answer'><input type='checkbox' data-sam='3' data-clover='' data-alex='4' data-jerry='' data-mandy=''>Vélo</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='4' data-mandy='5'>Voiture de sport</input></div>
+            <div class='answer'><input type='checkbox' data-sam='2' data-clover='4' data-alex='5' data-jerry='' data-mandy=''>Roller</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quel est ton plat préféré ?</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='5' data-mandy=''>Rôti à la menthe</input></div>
+            <div class='answer'><input type='checkbox' data-sam='3' data-clover='3' data-alex='5' data-jerry='' data-mandy='2'>Des sushis</input></div>
+            <div class='answer'><input type='checkbox' data-sam='4' data-clover='' data-alex='3' data-jerry='' data-mandy=''>Une petite salade verte, avec la sauce à côté</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quel est ton lieu de vacances idéales ?</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='5' data-jerry='' data-mandy=''>La haute montagne</input></div>
+            <div class='answer'><input type='checkbox' data-sam='2' data-clover='4' data-alex='4' data-jerry='' data-mandy='5'>Une plage paradisiaque</input></div>
+            <div class='answer'><input type='checkbox' data-sam='2' data-clover='' data-alex='' data-jerry='5' data-mandy=''>Un vieux manoir hanté</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='5' data-alex='' data-jerry='5' data-mandy='5'>Une fête géante à Ibiza</input></div>
+            <div class='answer'><input type='checkbox' data-sam='3' data-clover='' data-alex='3' data-jerry='1' data-mandy=''>Un cratère de volcan en activité</input></div>
+            <div class='answer'><input type='checkbox' data-sam='5' data-clover='' data-alex='' data-jerry='' data-mandy=''>Un musée</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quel est ton personnage d'Harry Potter préféré ?</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='3' data-jerry='' data-mandy=''>Harry Potter</input></div>
+            <div class='answer'><input type='checkbox' data-sam='5' data-clover='' data-alex='' data-jerry='' data-mandy=''>Hermione Granger</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='4' data-mandy=''>Albus Dumbledore</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='3' data-alex='' data-jerry='' data-mandy=''>Viktor Krum</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='' data-mandy='4'>Drago Malfoy</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quel est ton personnage de Star Wars préféré ?</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='4' data-alex='' data-jerry='2' data-mandy=''>Leia</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='' data-mandy='5'>Padmé Amidala</input></div>
+            <div class='answer'><input type='checkbox' data-sam='2' data-clover='' data-alex='' data-jerry='4' data-mandy=''>Han Solo</input></div>
+            <div class='answer'><input type='checkbox' data-sam='3' data-clover='' data-alex='4' data-jerry='4' data-mandy=''>Yoda</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='' data-mandy='3'>Anakin</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quelle est ta pâtisserie préférée ?</div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='2' data-alex='4' data-jerry='' data-mandy=''>Les éclairs au chocolat</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='5' data-mandy=''>Le pudding</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='4' data-alex='' data-jerry='' data-mandy=''>Les pains au chocolat</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='' data-mandy='3'>Croissants</input></div>
+        </div><div class='questionBlock'>
+            <div class='question'>Quel est ton parfum de glace préféré ?</div>
+            <div class='answer'><input type='checkbox' data-sam='3' data-clover='' data-alex='2' data-jerry='' data-mandy=''>Orange</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='3' data-jerry='' data-mandy='2'>Fruit de la passion</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='3' data-alex='' data-jerry='' data-mandy=''>Pomme</input></div>
+            <div class='answer'><input type='checkbox' data-sam='' data-clover='' data-alex='' data-jerry='3' data-mandy=''>Noix de coco</input></div>
+        </div>
+
+    </div>
+
+    <div class="resultsContainer" style="display:none">
+        Bravo, tu es :
+        <div class="result"></div>
+        <div class="resultPercent"></div>
+        <div class="imageResultContainer">
+            <img class="imageResult" src="#" />
+        </div>
+    </div>
+
+    <div class="generalErrorMessage">
+
+    </div>
+
+    <div class="buttonsContainer">
+        <button class="resetButton" onclick='Reset()'>Réinitialiser</button>
+        <button class="getResultsButton" onclick='GetResults()'>Valider et voir mes résulats !</button>
+    </div>
+</body>
+</html>
