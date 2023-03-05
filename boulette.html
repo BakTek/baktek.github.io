@@ -1,0 +1,228 @@
+<html>
+<head>
+    <title>Préparation Vidéo pour Mme. Villecroze</title>
+    <style>
+        * {
+            /* Font-size for the whole page */
+            font-size: 20px;
+            /* Use modern sans-serif font */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Page background */
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            /* Keep default h1 size */
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width:840px) {
+            .content {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+        }
+
+        .panelHeader {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .chevron {
+            position: relative;
+            display: block;
+            height: 50px; /*Height should be double border thickness*/
+            transition: transform 0.2s ease-out;
+            margin: 17px 25px 0 25px;
+        }
+
+            .chevron::before,
+            .chevron::after {
+                position: absolute;
+                display: block;
+                content: "";
+                border: 15px solid transparent; /*Adjust chevron size*/
+            }
+            /*Change the four instances of 'left' below to rotate chevron*/
+            /*Use (top/right/bottom/left) where you want the back of the chevron to be*/
+            .chevron::before {
+                left: 0;
+                border-left-color: #b00; /*Chevron Color*/
+            }
+
+            .chevron::after {
+                left: -10px; /*Adjust thickness*/
+                border-left-color: #fff; /*Match chevron background colour*/
+            }
+
+            .chevron.rotate {
+                transform: rotate(90deg);
+                transform-origin: 0 15px;
+            }
+
+        .expandablePanel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            margin-left: 30px;
+        }
+
+        /* Blocs */
+        .bloc1 {
+            border: 1px solid white;
+            padding: 10px;
+            color: white;
+            background-color: #800000;
+        }
+
+        .bloc2 {
+            border: 1px solid white;
+            padding: 10px;
+            color: white;
+            margin: 50px 0;
+        }
+
+        .bloc1 li {
+            margin-top: 35px;
+        }
+
+            .bloc1 li li {
+                margin-top: 20px;
+            }
+
+        .bloc2 li {
+            margin-top: 15px;
+        }
+
+        .signature {
+            font-style: italic;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Départ à la retraite de Mme Villecroze : vidéo-surprise "la boulette"</h1> <!-- Utiliser la balise <h1> pour le titre principal -->
+
+    <div class="content">
+        <p>
+            Au Petit Collège, Mme Villecroze part à la retraite à la fin de cette année scolaire... Et nous avons besoin de vous pour réaliser une vidéo-surprise !
+        </p>
+        <p>
+            Pour son départ, nous aimerions réaliser un montage vidéo façon "la boulette" où des élèves et anciens élèves se lancent une boulette de papier sur laquelle est inscrit un petit message sympa pour leur maîtresse.
+
+            <div style="margin-left:50px">
+                <div class="panelHeader">
+                    <i class="chevron"></i>
+                    <h5>Exemple : vidéo "boulette" complète trouvée sur Youtube</h5>
+                </div>
+                <div class="expandablePanel">
+                    <iframe width="640" height="400" src="https://www.youtube.com/embed/vDw2PpFhoMM?start=7&modestbranding=1&rel=0&showinfo=0" title="Vidéo exemple 'boulette'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            Plus il y aura d'élèves et d'anciens, plus forte sera la vidéo finale. Si vous pouviez faire passer ce message, via les fratries notamment, les amis des grands frères et s&#339;urs... nous espérons obtenir un maximum de vidéos d'anciens (y compris des élèves maintenant rentrés dans la vie professionnelle, ça serait génial) !
+        </p> <!-- Utiliser la balise <p> pour le texte normal -->
+        <div class="bloc1">
+            <!-- Utiliser la balise <div> avec une classe pour le bloc mis en avant -->
+            <ol>
+                <li>
+                    <strong>Préparer la vidéo :</strong>
+                    <ol type="a">
+                        <li>Sur une feuille A4 blanche, préparer le message (court et lisible), et froisser (un peu) la feuille.</li>
+                        <li>Dans un endroit bien éclairé, l'élève/ancien élève est face à la caméra (fixe et en mode paysage / horizontal).</li>
+                        <li>Il dit son prénom (et son nom s'il le souhaite), et son année scolaire passée avec Mme. Villecroze : nous couperons cette partie au montage, pour incruster le prénom en bas de l'image.</li>
+                        <li>Un complice hors-champ envoie la boulette de papier à l'élève qui l'attrape (ou la ramasse...)</li>
+                        <li>L'élève réceptionne la boulette, la déplie, montre le message à la caméra, re-froisse et renvoie hors-champ (gauche, droite, au-dessus : peu importe)</li>
+                    </ol>
+
+                    <div style="margin-left:50px">
+                        <div class="panelHeader">
+                            <i class="chevron"></i>
+                            <h5>Exemple complet d'une vidéo à préparer</h5>
+                        </div>
+                        <div class="expandablePanel">
+                            <iframe width="640" height="400" src="https://www.youtube.com/embed/vDw2PpFhoMM?start=7&modestbranding=1&rel=0&showinfo=0" title="Vidéo exemple 'boulette'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li>
+                    <strong>Nous envoyer cette vidéo :</strong>
+                    <ul>
+                        <li>soit en utilisant cet espace d'envoi : &lt;lien SP&gt;</li>
+                        <li>soit en la déposant sur l'espace de stockage de votre choix et en nous envoyant le lien vers le fichier à <a href="mailto:BOULETTE@LAB2001.COM" style="color: navajowhite;">BOULETTE@LAB2001.COM</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    (en option) Nous envoyer si vous le souhaitez un petit email pour nous indiquer votre adresse électronique : cela nous permettra de vous faire parvenir le résultat final en avant-première !
+                </li>
+            </ol>
+        </div>
+
+        <div class="bloc2">
+            Quelques conseils :
+            <ul>
+                <li>En mode paysage (téléphone horizontal, pas de mode portrait/vertical svp !)</li>
+                <li>Bien indiquer votre prénom et l'année scolaire avant le début de la vraie scène (ce passage sera coupé)</li>
+                <li>Bien éclairé.</li>
+                <li>Plan fixe.</li>
+                <li>L'environnement sonore importe peu : il sera remplacé par la bande son.</li>
+                <li>Pour le message sur le papier, on peut tout imaginer : "Merci", "C'était super", "Vive l'école", "Meilleure prof du monde", "Trop sympa", "Super souvenir", "Super prof", "Géniale", un message perso, un dessin...</li>
+                <li>Peu importe si le début ou la fin sont imparfaits, ou même si c'est trop long au milieu : ne vous embêtez pas, on dynamisera le tout au montage ! :)</li>
+                <li>Au moment où le papier est déplié, l'approcher de la caméra pour qu'il soit bien lisible.</li>
+            </ul>
+        </div>
+
+        Merci pour votre temps !
+        <br />Mais imaginez l'émotion de Mme. Villecroze si on parvient à regrouper ses élèves et anciens dans cette vidéo :)
+        <br /><br />
+        <div class="signature">
+            Les parents-délégués 9ième2
+            <br />Contact : <a href="mailto:BOULETTE@LAB2001.COM">BOULETTE@LAB2001.COM</a> -- 06 61 11 28 89
+        </div>
+    </div>
+
+    <script>
+        function togglePanel(panel, chevron) {
+            if (panel.style.maxHeight)
+                panel.style.maxHeight = null; // Panel is expanded, collapse it
+            else
+                panel.style.maxHeight = panel.scrollHeight + "px"; // Panel is collapsed, expand it
+
+            chevron.classList.toggle("rotate");
+        }
+
+        // Get the header elements
+        Array.prototype.forEach.call(document.querySelectorAll(".panelHeader"), function (panelHeader) {
+            // Add a click event listener to the header
+            panelHeader.addEventListener("click", function () {
+                // Get the panel element
+                var panel = Array.prototype.filter.call(panelHeader.parentNode.children, function (child) {
+                    return child.matches('.expandablePanel');
+                }).pop();
+                // Get the icon element
+                var chevron = Array.prototype.filter.call(panelHeader.children, function (child) {
+                    return child.matches('.chevron');
+                }).pop();
+
+                // Toggle the panel
+                togglePanel(panel, chevron);
+            });
+        });
+    </script>
+
+</body>
+</html>
